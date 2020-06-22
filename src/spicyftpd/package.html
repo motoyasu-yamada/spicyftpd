@@ -1,0 +1,14 @@
+<html>
+<head>
+<title>FTPサーバー</title>
+</head>
+<body>
+FTPサーバデーモンを起動するには次のようにします。<br>
+起動方法:<br>
+java spicyftpd.FtpDaemon &lt;port&gt; <br>
+<hr>
+デーモンは&lt;port&gt;で指定したポートでサーバソケットを生成しFTPクライアントからの接続を待機します。<br>
+FTPクライアントから接続要求があるとデーモンはスレッドを起動します。
+スレッドがクライアントからのコマンド接続を受付ます。
+</body>
+</html>

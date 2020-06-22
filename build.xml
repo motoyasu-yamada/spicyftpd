@@ -1,0 +1,26 @@
+﻿<!--
+-   SPICYFTPD
+-->
+<project name = "spicyftpd" default = "build">
+    <target name = "build">
+        <javac  srcdir = "src"
+                destdir = "classes"
+                debug = "on"
+                debuglevel = "lines">
+            <compilerarg line = "-target 1.4"/>
+            <compilerarg line = "-source 1.4"/>
+            <classpath>
+                <fileset dir = "lib"/>
+            </classpath>
+        </javac>
+    </target>
+
+    <target name = "run">
+        <java classname = "spicyftpd.Main">
+            <classpath>
+                <pathelement path = "classes"/>
+                <fileset dir = "lib"/>
+            </classpath>
+        </java>
+    </target>
+</project>
